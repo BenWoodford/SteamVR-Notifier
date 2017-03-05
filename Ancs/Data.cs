@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Thanks to https://github.com/troufster/AncsNotifier for this. Used under MIT license.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
