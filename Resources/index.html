@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <style type="text/css">
+        body, html {
+            background: transparent;
+            color: white;
+            font-family: 'Droid Sans', sans-serif;
+            overflow-x: hidden;7
+        }
+
+        h1, h2, h3 {
+            color: white;
+        }
+    </style>
+
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #ffffff;
+            }
+
+            ::-webkit-scrollbar-thumb:active {
+                background: #ffffff;
+            }
+
+        ::-webkit-scrollbar-track {
+            background: #363636;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+        }
+
+            ::-webkit-scrollbar-track:hover {
+                background: #363636;
+            }
+
+            ::-webkit-scrollbar-track:active {
+                background: #333333;
+            }
+
+        ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+
+        #notifications-holder {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .notification {
+            margin-bottom: 10px;
+            background: #0D293C;
+            padding: 10px;
+        }
+
+        h4 {
+            color: #14C4F9;
+            font-size: 1.6em;
+            font-family: 'Droid Sans', sans-serif;
+            margin-bottom: 10px;
+            padding: 0px;
+            margin-top: 0px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color:#B4DCF5;
+            font-family: 'Droid Sans', sans-serif;
+        }
+    </style>
+</head>
+<body ng-app="svrNotifier" ng-controller="NotificationsController as controller">
+    <div class="notification" ng-repeat="notification in controller.notifications">
+        <h4>{{ ::notification.title }}</h4>
+        <p>{{ ::notification.message }}</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
